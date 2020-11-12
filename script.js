@@ -1,5 +1,8 @@
 //get from local storage
 // recall getItem "gets the key"
+
+
+
 $("#9 .description").val(localStorage.getItem("9"));
 $("#10 .description").val(localStorage.getItem("10"));
 $("#11 .description").val(localStorage.getItem("11"));
@@ -30,6 +33,16 @@ const div6 = $(document)[0].body.children[1].children[5];
 const div7 = $(document)[0].body.children[1].children[6];
 const div8 = $(document)[0].body.children[1].children[7];
 const div9 = $(document)[0].body.children[1].children[8];
+
+// console.log(div8);
+
+let arrayTime = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+
+let value = arrayTime.forEach(element => console.log(element));
+
+
+
+
 
 
 const text1 = div1.children[1];
