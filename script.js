@@ -2,6 +2,9 @@ setInterval(function() {
     $(".today").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
 }, 1);
 
+let hourNow = moment().hour();
+
+
 
 $("#9 .description").val(localStorage.getItem("9"));
 $("#10 .description").val(localStorage.getItem("10"));
@@ -20,11 +23,26 @@ $(".saveBtn").click(function () {
     localStorage.setItem(timeKey, textValue);
 });
 
+
+
+
 let arrayTime = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+// console.log(hourNow);
 
-let value = arrayTime.forEach(function () {});
-// console.log(value[i]);
 
+
+for (let i = 0; i < arrayTime.length; i++) {
+	if (hourNow < arrayTime[i]) {
+		$("#" + arrayTime[i])
+			.removeClass("present")
+            .addClass("future");
+            
+	} else if (hourNow > arrayTime[i]) {
+		$("#" + arrayTime[i])
+			.removeClass("present")
+			.addClass("past");
+	}
+}
 
 
 
