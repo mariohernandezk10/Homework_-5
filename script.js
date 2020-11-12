@@ -14,6 +14,13 @@ $("#17 .description").val(localStorage.getItem("17"));
 // local storage has a key and value
 // the value = user inputs
 // the key = time
+
+$(".saveBtn").click(function () {
+	let textValue = $(this).siblings(".description").val();
+	let timeKey = $(this).parent().attr("id");
+    localStorage.setItem(timeKey, textValue);
+});
+
 const div1 = $(document)[0].body.children[1].children[0];
 const div2 = $(document)[0].body.children[1].children[1];
 const div3 = $(document)[0].body.children[1].children[2];
@@ -34,14 +41,3 @@ const text6 = div6.children[1];
 const text7 = div7.children[1];
 const text8 = div8.children[1];
 const text9 = div9.children[1];
-
-
-$(".saveBtn").click(function () {
-	let textValue = $(this).siblings(".description").val();
-	// console.log(textValue);
-	let timeKey = $(this).parent().attr("id");
-	// console.log(timeKey);
-	localStorage.setItem(timeKey, textValue);
-});
-
-
