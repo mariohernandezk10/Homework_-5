@@ -1,6 +1,13 @@
 //get from local storage
 // recall getItem "gets the key"
 
+// we need to add the set interval time
+// first we need to get the correct format
+setInterval(function() {
+    $(".today").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
+}, 1)
+
+
 
 
 $("#9 .description").val(localStorage.getItem("9"));
@@ -38,7 +45,7 @@ const div9 = $(document)[0].body.children[1].children[8];
 
 let arrayTime = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
-let value = arrayTime.forEach(element => console.log(element));
+// let value = arrayTime.forEach(function () {});
 
 
 
